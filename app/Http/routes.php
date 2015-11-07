@@ -15,3 +15,5 @@ get('/', function ()
 {
 	return view('landing');
 });
+
+get('/competition/{id}/teams', ['uses' => 'ApiController@teams', 'as' => 'teams']);

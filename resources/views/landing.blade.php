@@ -6,6 +6,10 @@
 		<div class="fourteen wide mobile eight wide tablet six wide computer column center aligned">
 			<div class="ui segment">
 
+				<div class="ui inverted active dimmer" v-show="busy">
+					<div class="ui text loader">Negociating with server</div>
+				</div>
+
 				<form class="ui form" method="POST" action="/register">
 					{!! csrf_field() !!}
 					<h4 class="ui dividing header">Persoonlijke gegevens</h4>
@@ -34,7 +38,7 @@
 							</div>
 						</div>
 						<div class="six wide field">
-							<div class="ui fluid search selection dropdown">
+							<div class="ui fluid disabled search selection dropdown">
 								<input type="hidden" name="team">
 								<i class="dropdown icon"></i>
 								<input class="search">
@@ -45,7 +49,7 @@
 							</div>
 						</div>
 						<div class="four wide field">
-							<div class="ui basic fluid blue submit button">Maak team</div>
+							<div class="ui basic fluid blue submit button" v-on:click="createTeam">Maak team</div>
 						</div>
 					</div>
 					<div class="field">
@@ -80,6 +84,40 @@
 					</div>
 				@endif
 
+			</div>
+		</div>
+	</div>
+
+	<div class="ui small second coupled modal">
+		<div class="header">
+			Maak een nieuw team
+		</div>
+		<div class="content">
+
+			<form class="ui form">
+				<div class="two fields">
+					<div class="field">
+						<div class="ui fluid search selection dropdown">
+							<input type="hidden" name="team">
+							<i class="dropdown icon"></i>
+							<input class="search">
+							<div class="default text">Kies een team</div>
+							<div class="menu">
+								<div class="item">choice</div>
+							</div>
+						</div>
+					</div>
+					<div class="field">
+						<input type="number" min="3" max="8" placeholder="Aantal teamleden">
+					</div>
+				</div>
+			</form>
+
+		</div>
+		<div class="actions">
+			<div class="ui green basic approve button" v-on:click="createTeam">
+				<i class="checkmark icon"></i>
+				Opslaan
 			</div>
 		</div>
 	</div>

@@ -16,6 +16,7 @@ class CreateUsersTable extends Migration
             $table->increments('id');
             $table->string('fname');
             $table->string('lname');
+			$table->integer('team_id');
             $table->timestamps();
         });
     }

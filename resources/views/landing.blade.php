@@ -113,8 +113,9 @@
 							<input class="search">
 							<div class="default text">Kies een competitie</div>
 							<div class="menu">
-								<div class="item" data-value="1">comp</div>
-								<div v-for="team in teams" class="item">@{{ team }}</div>
+								@foreach ($competitions as $competition)
+									<div class="item" data-value="{{ $competition->id }}">{{ $competition->name }}</div>
+								@endforeach
 							</div>
 						</div>
 					</div>

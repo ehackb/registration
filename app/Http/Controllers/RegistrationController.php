@@ -4,9 +4,9 @@
 namespace App\Http\Controllers;
 
 
+use App\Http\Requests\CreateTeamRequest;
 use App\Http\Requests\UserRegistrationRequest;
 use App\Team;
-use Illuminate\Http\Request;
 
 class RegistrationController extends Controller
 {
@@ -15,7 +15,7 @@ class RegistrationController extends Controller
 		return redirect()->back()->withInput();
 	}
 
-	public function team(Request $request)
+	public function team(CreateTeamRequest $request)
 	{
 		Team::create([
 				'name' => $request->get('naam'),

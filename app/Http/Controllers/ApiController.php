@@ -4,15 +4,13 @@
 namespace App\Http\Controllers;
 
 
+use App\Competition;
+
 class ApiController extends Controller
 {
 	public function teams($id)
 	{
-		return response()->json([
-			'Team 1',
-			'Team 2',
-			'Team 3',
-			'Team 4'
-		]);
+		$teams = $id == -1 ? [] : Competition::find($id)->teams();
+		return response()->json($teams);
 	}
 }

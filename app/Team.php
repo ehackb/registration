@@ -25,4 +25,9 @@ class Team extends Model
 	{
 		return $this->hasMany(User::class);
 	}
+
+	public function competition()
+	{
+		return $this->hasOne(Competition::class);
+	}
 }

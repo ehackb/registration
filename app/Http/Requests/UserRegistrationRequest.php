@@ -8,6 +8,9 @@ class UserRegistrationRequest extends Request
 	{
 		return [
 				'required' => 'Het :attribute veld is verplicht.',
+				'email' => ':attribute Moet een geldig email adres zijn',
+				'exists' => ':attribute moet een geldige optie zijn',
+				'in' => ':attribute moet een geldige optie zijn',
 		];
 	}
 
@@ -32,7 +35,7 @@ class UserRegistrationRequest extends Request
 			'voornaam' => 'required',
 			'achternaam' => 'required',
 			'email' => 'required|email',
-			'competitie' => 'required|in:1,2,3',
+				'competitie' => 'required|exists:competitie,id',
 				'team' => 'sometimes|exists:teams,id',
 			'options' => 'sometimes|in:1,2'
 		];

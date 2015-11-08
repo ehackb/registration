@@ -35,7 +35,7 @@ class UserRegistrationRequest extends Request
 			'voornaam' => 'required',
 			'achternaam' => 'required',
 			'email' => 'required|email',
-				'competitie' => 'required|exists:competitie,id',
+				'competitie' => 'required|exists:competities,id',
 				'team' => 'sometimes|exists:teams,id',
 			'options' => 'sometimes|in:1,2'
 		];

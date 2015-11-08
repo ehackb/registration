@@ -43,14 +43,14 @@ class CreateUserJob extends Job
 		$team = Team::find($this->team);
 		$competition = Competition::find($this->competitie);
 
-		if ($team->competition->id != $competition->id)
+		if ($team != null && $team->competition->id != $competition->id)
 			return redirect()->back()->withErrors('Ongeldige team/competitie combinatie');
 
 		User::create([
 				'fname' => $this->voornaam,
 				'lname' => $this->achternaam,
 				'email' => $this->email,
-				'team_id' => $team->id
+				'team_id' => is_null($team) ? -1 : $team->id
 		]);
 
 		return redirect()->back()->withInput();

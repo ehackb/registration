@@ -30,7 +30,7 @@ class RegistrationController extends Controller
 				'size' => $request->get('team_grootte')
 		]);
 
-		if ($competition->maxteams <= $competition->teams->count())
+		if ($competition->maxteams <= $competition->teams->count() + 1) // not committed yet and stuff
 		{
 			\Mail::send('teamcapacity', ['competition' => $competition], function ($m)
 			{

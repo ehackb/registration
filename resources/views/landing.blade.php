@@ -10,7 +10,7 @@
 					<div class="ui text loader">Negociating with server</div>
 				</div>
 
-				<form class="ui form" method="POST" action="/register">
+				<form class="ui form" method="POST" action="{{ route('register') }}">
 					{!! csrf_field() !!}
 					<h4 class="ui dividing header">Persoonlijke gegevens</h4>
 					<div class="field">
@@ -23,6 +23,9 @@
 							</div>
 						</div>
 					</div>
+					<div class="field">
+						<input type="email" name="email" placeholder="Email adres">
+					</div>
 					<div class="two fields">
 						<div class="six wide field">
 							<div class="ui fluid search selection dropdown">
@@ -31,20 +34,20 @@
 								<input class="search">
 								<div class="default text">Kies een competitie</div>
 								<div class="menu">
-									<div class="item">Ik neem geen deel</div>
-									<div class="item">Counter Strike</div>
-									<div class="item">League of Legends</div>
+									<div class="item" data-value="geen">Ik neem geen deel</div>
+									<div class="item" data-value="cs:go">Counter Strike</div>
+									<div class="item" data-value="lol">League of Legends</div>
 								</div>
 							</div>
 						</div>
 						<div class="six wide field">
-							<div class="ui fluid disabled search selection dropdown">
+							<div class="ui fluid @{{ status }} search selection dropdown">
 								<input type="hidden" name="team">
 								<i class="dropdown icon"></i>
 								<input class="search">
 								<div class="default text">Kies een team</div>
 								<div class="menu">
-									<div class="item">choice</div>
+									<div v-for="team in teams" class="item">@{{ team }}</div>
 								</div>
 							</div>
 						</div>
@@ -98,17 +101,17 @@
 				<div class="two fields">
 					<div class="field">
 						<div class="ui fluid search selection dropdown">
-							<input type="hidden" name="team">
+							<input type="hidden" name="team" id="teams">
 							<i class="dropdown icon"></i>
 							<input class="search">
 							<div class="default text">Kies een team</div>
 							<div class="menu">
-								<div class="item">choice</div>
+								<div v-for="team in teams" class="item">@{{ team }}</div>
 							</div>
 						</div>
 					</div>
 					<div class="field">
-						<input type="number" min="3" max="8" placeholder="Aantal teamleden">
+						<input type="number" min="3" max="8" value="3" placeholder="Aantal teamleden">
 					</div>
 				</div>
 			</form>

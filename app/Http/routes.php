@@ -16,4 +16,6 @@ get('/', function ()
 	return view('landing');
 });
 
+post('/register', ['uses' => 'RegistrationController@register', 'as' => 'register']);
+
 get('/competition/{id}/teams', ['uses' => 'ApiController@teams', 'as' => 'teams']);

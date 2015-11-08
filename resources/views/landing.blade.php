@@ -124,7 +124,7 @@
 
 		</div>
 		<div class="actions">
-			<button class="ui green basic approve button">
+			<button class="ui green basic approve button" v-on:click="submit">
 				<i class="checkmark icon"></i>
 				Opslaan
 			</button>

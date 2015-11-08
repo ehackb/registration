@@ -15,8 +15,6 @@ class RegistrationController extends Controller
 
 	public function team()
 	{
-		return response()->json([
-				'status' => 'success'
-		]);
+
 	}
 }

@@ -36,5 +36,11 @@ var controller = new Vue({
 });
 
 var modal = new Vue({
-	el: '.small.modal'
+	el: '.small.modal',
+	methods: {
+		submit: function ()
+		{
+			$('#teamform').submit();
+		}
+	}
 });

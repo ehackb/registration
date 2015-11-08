@@ -30,6 +30,14 @@ class RegistrationController extends Controller
 				'size' => $request->get('team_grootte')
 		]);
 
+		if ($competition->maxteams <= $competition->teams->count())
+		{
+			\Mail::send('teamcapacity', ['competition' => $competition], function ($m)
+			{
+				$m->to(env('ADMIN_MAIL'), '')->subject('Team capaciteit bereikt!');
+			});
+		}
+
 		return redirect()->back();
 	}
 }

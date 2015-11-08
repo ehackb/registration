@@ -28,6 +28,6 @@ class Team extends Model
 
 	public function competition()
 	{
-		return $this->hasOne(Competition::class);
+		return $this->belongsTo(Competition::class);
 	}
 }

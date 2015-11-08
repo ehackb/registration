@@ -40,6 +40,13 @@ class CreateUserJob extends Job
 
 	public function handle()
 	{
+		$team = Team::find($this->team);
+		$competition = Competition::find($this->competitie);
 
+		if ($team->competition->id != $competition->id)
+			return redirect()->back()->withErrors('Ongeldige team/competitie combinatie');
+
+
+		return redirect()->back()->withInput();
 	}
 }

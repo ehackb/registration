@@ -14,16 +14,14 @@ class RegistrationController extends Controller
 {
 	public function register(UserRegistrationRequest $request)
 	{
-		$this->dispatchFrom(CreateUserJob::class, $request);
-
-		return redirect()->back()->withInput();
+		return $this->dispatchFrom(CreateUserJob::class, $request);
 	}
 
 	public function team(CreateTeamRequest $request)
 	{
 		$competition = Competition::find($request->get('competition'));
 
-		if ($competition->maxteams >= $competition->teams->count())
+		if ($competition->maxteams <= $competition->teams->count())
 			return redirect()->back()->withErrors(['Maximale hoeveelheid teams voor deze competitie is bereikt']);
 
 		Team::create([

@@ -24,10 +24,9 @@ var controller = new Vue({
 		},
 		loadTeams: function ()
 		{
-			alert(this.competitie);
 			var that = this;
 			this.status = 'disabled loading';
-			$.get('/competition/1/teams').done(function (data)
+			$.get('/competition/' + this.competitie + '/teams').done(function (data)
 			{
 				that.status = '';
 				that.teams = data;

@@ -4,6 +4,7 @@
 namespace App\Http\Controllers;
 
 
+use App\Competition;
 use App\CreateUserJob;
 use App\Http\Requests\CreateTeamRequest;
 use App\Http\Requests\UserRegistrationRequest;
@@ -20,9 +21,14 @@ class RegistrationController extends Controller
 
 	public function team(CreateTeamRequest $request)
 	{
+		$competition = Competition::find($request->get('competition'));
+
+		if ($competition->maxteams >= $competition->teams->count())
+			return redirect()->back()->withErrors(['Maximale hoeveelheid teams voor deze competitie is bereikt']);
+
 		Team::create([
 				'name' => $request->get('naam'),
-				'competition_id' => $request->get('competition'),
+				'competition_id' => $competition->id,
 				'size' => $request->get('team_grootte')
 		]);
 

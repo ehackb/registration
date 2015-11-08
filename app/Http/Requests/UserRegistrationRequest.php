@@ -33,7 +33,7 @@ class UserRegistrationRequest extends Request
 			'achternaam' => 'required',
 			'email' => 'required|email',
 			'competitie' => 'required|in:1,2,3',
-				'team' => 'required|exists:teams,id',
+				'team' => 'sometimes|exists:teams,id',
 			'options' => 'sometimes|in:1,2'
 		];
 	}

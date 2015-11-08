@@ -34,7 +34,6 @@
 								<input class="search">
 								<div class="default text">Kies een competitie</div>
 								<div class="menu">
-									<div class="item" data-value="-1">Ik neem geen deel</div>
 									@foreach ($competitions as $competition)
 										<div class="item" data-value="{{ $competition->id }}">{{ $competition->name }}</div>
 									@endforeach

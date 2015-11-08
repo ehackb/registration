@@ -4,6 +4,7 @@
 namespace App\Http\Controllers;
 
 
+use App\CreateUserJob;
 use App\Http\Requests\CreateTeamRequest;
 use App\Http\Requests\UserRegistrationRequest;
 use App\Team;
@@ -12,6 +13,8 @@ class RegistrationController extends Controller
 {
 	public function register(UserRegistrationRequest $request)
 	{
+		$this->dispatchFrom(CreateUserJob::class, $request);
+
 		return redirect()->back()->withInput();
 	}
 

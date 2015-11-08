@@ -10,7 +10,8 @@ class ApiController extends Controller
 {
 	public function teams($id)
 	{
-		$teams = $id == -1 ? [] : Competition::find($id)->teams();
+		$teams = $id == -1 ? [] : Competition::find($id)->teams;
+
 		return response()->json($teams);
 	}
 }

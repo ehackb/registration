@@ -19,7 +19,7 @@ class Team extends Model
 	 *
 	 * @var array
 	 */
-	protected $fillable = ['name', 'size'];
+	protected $fillable = ['name', 'size', 'competition_id'];
 
 	public function members()
 	{

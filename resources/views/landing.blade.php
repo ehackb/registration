@@ -48,7 +48,7 @@
 								<input class="search">
 								<div class="default text">Kies een team</div>
 								<div class="menu">
-									<div v-for="team in teams" class="item">@{{ team }}</div>
+									<div v-for="team in teams" class="item" data-value="@{{ team.id }}">@{{ team.name }}</div>
 								</div>
 							</div>
 						</div>
@@ -98,7 +98,8 @@
 		</div>
 		<div class="content">
 
-			<form class="ui form" id="teamform">
+			<form class="ui form" id="teamform" action="{{ route('register.team') }}" method="POST">
+				{!! csrf_field() !!}
 
 				<div class="field">
 					<input type="text" name="naam" placeholder="Team naam">
@@ -107,17 +108,18 @@
 				<div class="two fields">
 					<div class="field">
 						<div class="ui fluid search selection dropdown">
-							<input type="hidden" name="team" id="teams">
+							<input type="hidden" name="competition">
 							<i class="dropdown icon"></i>
 							<input class="search">
 							<div class="default text">Kies een competitie</div>
 							<div class="menu">
+								<div class="item" data-value="1">comp</div>
 								<div v-for="team in teams" class="item">@{{ team }}</div>
 							</div>
 						</div>
 					</div>
 					<div class="field">
-						<input type="number" min="3" max="8" value="3" placeholder="Aantal teamleden">
+						<input type="number" min="3" max="8" value="3" name="team_grootte" placeholder="Aantal teamleden">
 					</div>
 				</div>
 			</form>

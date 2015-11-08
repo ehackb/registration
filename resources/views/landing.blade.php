@@ -43,7 +43,7 @@
 						</div>
 						<div class="six wide field">
 							<div class="ui fluid @{{ status }} search selection dropdown">
-								<input type="hidden" name="team">
+								<input type="hidden" name="team" v-model="team">
 								<i class="dropdown icon"></i>
 								<input class="search">
 								<div class="default text">Kies een team</div>

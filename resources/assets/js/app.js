@@ -8,7 +8,14 @@ var controller = new Vue({
 	data: {
 		busy: false,
 		status: 'disabled',
-		teams: []
+		teams: [],
+		competitie: null
+	},
+	created: function ()
+	{
+		$('#competitie').dropdown({
+			onChange: this.loadTeams
+		})
 	},
 	methods: {
 		createTeam: function ()
@@ -17,6 +24,7 @@ var controller = new Vue({
 		},
 		loadTeams: function ()
 		{
+			alert(this.competitie);
 			var that = this;
 			this.status = 'disabled loading';
 			$.get('/competition/1/teams').done(function (data)

@@ -13,7 +13,7 @@
 
 get('/', function ()
 {
-	return view('landing');
+	return view('landing')->with('competitions', \App\Competition::all());
 });
 
 post('/register', ['uses' => 'RegistrationController@register', 'as' => 'register']);

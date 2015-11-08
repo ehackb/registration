@@ -28,15 +28,16 @@
 					</div>
 					<div class="two fields">
 						<div class="six wide field">
-							<div class="ui fluid search selection dropdown">
-								<input type="hidden" name="competitie">
+							<div class="ui fluid search selection dropdown" id="competitie">
+								<input type="hidden" name="competitie" v-model="competitie">
 								<i class="dropdown icon"></i>
 								<input class="search">
 								<div class="default text">Kies een competitie</div>
 								<div class="menu">
-									<div class="item" data-value="geen">Ik neem geen deel</div>
-									<div class="item" data-value="cs:go">Counter Strike</div>
-									<div class="item" data-value="lol">League of Legends</div>
+									<div class="item" data-value="-1">Ik neem geen deel</div>
+									@foreach ($competitions as $competition)
+										<div class="item" data-value="{{ $competition->id }}">{{ $competition->name }}</div>
+									@endforeach
 								</div>
 							</div>
 						</div>
@@ -97,7 +98,7 @@
 		</div>
 		<div class="content">
 
-			<form class="ui form">
+			<form class="ui form" id="teamform">
 
 				<div class="field">
 					<input type="text" name="naam" placeholder="Team naam">

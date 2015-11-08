@@ -18,4 +18,6 @@ get('/', function ()
 
 post('/register', ['uses' => 'RegistrationController@register', 'as' => 'register']);
 
+post('/team/register', ['uses' => 'RegistrationController@team', 'as' => 'register.team']);
+
 get('/competition/{id}/teams', ['uses' => 'ApiController@teams', 'as' => 'teams']);

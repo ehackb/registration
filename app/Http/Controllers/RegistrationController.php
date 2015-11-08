@@ -10,6 +10,13 @@ class RegistrationController extends Controller
 {
 	public function register(UserRegistrationRequest $request)
 	{
+		return redirect()->back()->withInput();
+	}
 
+	public function team()
+	{
+		return response()->json([
+				'status' => 'success'
+		]);
 	}
 }

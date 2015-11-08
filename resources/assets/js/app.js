@@ -2,14 +2,11 @@
 
 $('.ui.checkbox').checkbox();
 $('.ui.dropdown').dropdown();
-$('#teams').on('change', function ()
-{
-	controller.loadTeams();
-});
 
 var controller = new Vue({
 	el: '.ui.segment',
 	data: {
+		busy: false,
 		status: 'disabled',
 		teams: []
 	},
@@ -32,11 +29,5 @@ var controller = new Vue({
 });
 
 var modal = new Vue({
-	el: '.small.modal',
-	methods: {
-		createTeam: function ()
-		{
-			controller.busy = true;
-		}
-	}
+	el: '.small.modal'
 });

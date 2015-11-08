@@ -98,13 +98,18 @@
 		<div class="content">
 
 			<form class="ui form">
+
+				<div class="field">
+					<input type="text" name="naam" placeholder="Team naam">
+				</div>
+
 				<div class="two fields">
 					<div class="field">
 						<div class="ui fluid search selection dropdown">
 							<input type="hidden" name="team" id="teams">
 							<i class="dropdown icon"></i>
 							<input class="search">
-							<div class="default text">Kies een team</div>
+							<div class="default text">Kies een competitie</div>
 							<div class="menu">
 								<div v-for="team in teams" class="item">@{{ team }}</div>
 							</div>
@@ -118,10 +123,10 @@
 
 		</div>
 		<div class="actions">
-			<div class="ui green basic approve button" v-on:click="createTeam">
+			<button class="ui green basic approve button">
 				<i class="checkmark icon"></i>
 				Opslaan
-			</div>
+			</button>
 		</div>
 	</div>
 

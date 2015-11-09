@@ -11,6 +11,7 @@ class UserRegistrationRequest extends Request
 				'email' => ':attribute Moet een geldig email adres zijn',
 				'exists' => ':attribute moet een geldige optie zijn',
 				'in' => ':attribute moet een geldige optie zijn',
+				'student' => 'U dient te registreren met uw studenten email'
 		];
 	}
 
@@ -37,7 +38,7 @@ class UserRegistrationRequest extends Request
 				'email' => 'required|email|student',
 				'competitie' => 'required|exists:competities,id',
 				'team' => 'sometimes|exists:teams,id',
-			'options' => 'sometimes|in:1,2'
+				'options' => 'sometimes'
 		];
 	}
 }

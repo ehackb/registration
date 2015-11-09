@@ -60,8 +60,8 @@
 							<input type="hidden" name="options">
 							<div class="default text">Extra opties</div>
 							<div class="menu">
-								<div class="item">Ik wil een netwerk kabel op eHackB kopen</div>
-								<div class="item">Ik wil ontbijten op eHackB</div>
+								<div class="item" data-value="1">Ik wil een netwerk kabel op eHackB kopen</div>
+								<div class="item" data-value="2">Ik wil ontbijten op eHackB</div>
 							</div>
 						</div>
 					</div>

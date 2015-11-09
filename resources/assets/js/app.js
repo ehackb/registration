@@ -30,7 +30,6 @@ var controller = new Vue({
 			{
 				that.status = '';
 				that.teams = data;
-				$('.ui.dropdown').dropdown('setup menu');
 			});
 		}
 	}

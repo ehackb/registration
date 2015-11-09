@@ -13,7 +13,10 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        //
+        \Validator::extend('student', function ($attribute, $value, $parameters, $validator)
+        {
+            return preg_match('/[a-z]*@student\.ehb\.be/', $value) != 0;
+        });
     }
 
     /**

@@ -46,7 +46,7 @@ class CreateUserJob extends Job
 		if ($team != null && $team->competition->id != $competition->id)
 			return redirect()->back()->withErrors('Ongeldige team/competitie combinatie');
 
-		if ($team->members->count() >= $team->size)
+		if ($team != null && $team->members->count() >= $team->size)
 			return redirect()->back()->withErrors(['Maximale team capaciteit bereikt']);
 
 		User::create([

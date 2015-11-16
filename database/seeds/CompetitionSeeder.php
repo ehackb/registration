@@ -15,7 +15,7 @@ class CompetitionSeeder extends Seeder
 	{
 		\App\Competition::create([
 				'name' => 'Ik neem geen deel aan competitie',
-				'maxteams' => 1
+				'maxteams' => 0
 		]);
 
 		\App\Competition::create([
@@ -24,8 +24,18 @@ class CompetitionSeeder extends Seeder
 		]);
 
 		\App\Competition::create([
-			'name' => 'League of Legends',
-			'maxteams' => 8
+				'name' => 'League of Legends',
+				'maxteams' => 8
+		]);
+
+		\App\Competition::create([
+				'name' => 'Niet competitieve games',
+				'maxteams' => 1
+		]);
+
+		\App\Competition::create([
+				'name' => 'Corners',
+				'maxteams' => 1
 		]);
 	}
 }

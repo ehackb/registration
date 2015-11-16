@@ -21,13 +21,13 @@ class RegistrationController extends Controller
 	{
 		$competition = Competition::find($request->get('competition'));
 
-		if ($competition->maxteams <= $competition->teams->count())
+		if ($competition->maxteams <= $competition->teams->count() + 1)
 			return redirect()->back()->withErrors(['Maximale hoeveelheid teams voor deze competitie is bereikt']);
 
 		Team::create([
-				'name' => $request->get('naam'),
-				'competition_id' => $competition->id,
-				'size' => $request->get('team_grootte')
+			'name' => $request->get('naam'),
+			'competition_id' => $competition->id,
+			'size' => $request->get('team_grootte')
 		]);
 
 		if ($competition->maxteams <= $competition->teams->count() + 1) // not committed yet and stuff

@@ -1,0 +1,1 @@
+{"version":3,"sources":["app.scss"],"names":[],"mappings":"AAAA;EAEC,mBAAmB,EACnB","file":"app.css","sourcesContent":[".ui.grid\n{\n\tpadding-top: 10rem;\n}"],"sourceRoot":"/source/"}

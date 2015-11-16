@@ -1,4 +1,9 @@
-.ui.grid {
-  padding-top: 10rem; }
+
+@media only screen and (min-width: 760px) {
+
+  .ui.grid {
+    padding-top: 10rem; }
+
+}
 
 /*# sourceMappingURL=app.css.map */

@@ -56,6 +56,6 @@ class CreateUserJob extends Job
 				'team_id' => is_null($team) ? -1 : $team->id
 		]);
 
-		return redirect()->back()->withInput();
+		return redirect()->back()->withInput()->with('message', 'U bent geregistreerd!');
 	}
 }

@@ -2,6 +2,7 @@
 
 $('.ui.checkbox').checkbox();
 $('.ui.dropdown').dropdown();
+$('.nag').nag();
 
 var controller = new Vue({
 	el: '.ui.segment',

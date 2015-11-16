@@ -9,6 +9,15 @@
 	<body>
 		<div class="background"></div>
 
+		@if (session('message'))
+			<div class="ui positive inline cookie nag">
+			<span class="title">
+			{{ session('message') }}
+			</span>
+				<i class="close icon"></i>
+			</div>
+		@endif
+
 		@yield('content')
 
 		<script src="{{ asset('/vendor/jquery/dist/jquery.min.js') }}"></script>

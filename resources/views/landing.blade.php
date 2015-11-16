@@ -3,7 +3,7 @@
 @section('content')
 
 	<div class="ui centered grid">
-		<div class="fourteen wide mobile eight wide tablet six wide computer column center aligned">
+		<div class="sixteen wide mobile fourteen wide tablet six wide computer column center aligned">
 			<div class="ui segment">
 
 				<div class="ui inverted active dimmer" v-show="busy">

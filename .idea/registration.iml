@@ -8,6 +8,7 @@
       <sourceFolder url="file://$MODULE_DIR$/vendor" isTestSource="false" />
       <excludeFolder url="file://$MODULE_DIR$/bootstrap" />
       <excludeFolder url="file://$MODULE_DIR$/database" />
+      <excludeFolder url="file://$MODULE_DIR$/node_modules" />
       <excludeFolder url="file://$MODULE_DIR$/storage" />
     </content>
     <orderEntry type="inheritedJdk" />

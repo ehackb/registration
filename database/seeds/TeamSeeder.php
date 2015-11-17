@@ -22,7 +22,7 @@ class TeamSeeder extends Seeder
 		\App\Team::create([
 			'name' => 'FIFA (1v1',
 			'competition_id' => 4,
-			'size' => 16
+			'size' => 14 // 16 - 2 people who help with the controllers and wanted their space reserved.
 		]);
 
 		\App\Team::create([

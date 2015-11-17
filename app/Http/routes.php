@@ -21,3 +21,5 @@ post('/register', ['uses' => 'RegistrationController@register', 'as' => 'registe
 post('/team/register', ['uses' => 'RegistrationController@team', 'as' => 'register.team']);
 
 get('/competition/{id}/teams', ['uses' => 'ApiController@teams', 'as' => 'teams']);
+
+get('/administration', ['uses' => 'AdminController@show']);

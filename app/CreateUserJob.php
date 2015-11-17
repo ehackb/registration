@@ -50,10 +50,13 @@ class CreateUserJob extends Job
 			return redirect()->back()->withErrors(['Maximale team capaciteit bereikt']);
 
 		$externals = 0;
-		foreach ($team->members as $member)
+		if ($team != null)
 		{
-			if (!str_contains($member->email, ['@student.ehb.be', '@ehb.be']))
-				$externals = $externals + 1;
+			foreach ($team->members as $member)
+			{
+				if (!str_contains($member->email, ['@student.ehb.be', '@ehb.be']))
+					$externals = $externals + 1;
+			}
 		}
 
 		if ($externals >= 3)

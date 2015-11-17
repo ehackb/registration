@@ -1,0 +1,31 @@
+html
+{
+	background-color: darken(white, 10%);
+}
+
+body {
+	position: absolute;
+	display: flex;
+	min-height: 100vh;
+	flex-direction: column;
+	bottom: 0;
+	width: 100%;
+}
+
+body>div.container
+{
+	padding-top: 5rem;
+}
+
+footer
+{
+	position: fixed;
+	bottom: 0;
+	width: 100%;
+	text-align: center;
+}
+
+.logo
+{
+	max-width: 100%;
+}

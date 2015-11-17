@@ -14,7 +14,7 @@ class CompetitionSeeder extends Seeder
 	public function run()
 	{
 		\App\Competition::create([
-				'name' => 'Ik neem geen deel aan competitie',
+				'name' => 'Ik neem niet deel aan competitie',
 				'maxteams' => 0
 		]);
 

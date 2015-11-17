@@ -29,7 +29,7 @@ class CompetitionSeeder extends Seeder
 		]);
 
 		\App\Competition::create([
-				'name' => 'Niet competitieve games',
+				'name' => 'Anderen (niet competitie)',
 				'maxteams' => 1
 		]);
 

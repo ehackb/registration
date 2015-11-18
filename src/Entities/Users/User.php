@@ -5,10 +5,10 @@ namespace EhackB\Entities\Users;
 use Fundamentals\Entities\Models\BaseModel;
 use Illuminate\Auth\Authenticatable;
 use Illuminate\Auth\Passwords\CanResetPassword;
-use Illuminate\Foundation\Auth\Access\Authorizable;
-use Illuminate\Contracts\Auth\Authenticatable as AuthenticatableContract;
 use Illuminate\Contracts\Auth\Access\Authorizable as AuthorizableContract;
+use Illuminate\Contracts\Auth\Authenticatable as AuthenticatableContract;
 use Illuminate\Contracts\Auth\CanResetPassword as CanResetPasswordContract;
+use Illuminate\Foundation\Auth\Access\Authorizable;
 
 class User extends BaseModel implements AuthenticatableContract,
                                     AuthorizableContract,
@@ -36,4 +36,10 @@ class User extends BaseModel implements AuthenticatableContract,
      * @var array
      */
     protected $hidden = ['password', 'remember_token'];
+
+	public function setPasswordAttribute($value)
+	{
+		if (\Hash::needsRehash($value))
+			$this->attributes['password'] = \Hash::make($value);
+	}
 }

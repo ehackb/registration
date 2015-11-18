@@ -17,10 +17,18 @@ class ActivitiesTableSeeder extends \Illuminate\Database\Seeder
 		]);
 
 		\EhackB\Entities\Activities\Activity::create([
-			'name' => 'Hearthstone (1v1)',
-			'max' => 16
+				'name' => 'Hearthstone (1v1)',
+				'max' => 16
 		]);
 
-		// TODO corners!
+		\EhackB\Entities\Activities\Activity::create([
+				'name' => 'Create corner',
+				'max' => 0
+		]);
+
+		\EhackB\Entities\Activities\Activity::create([
+				'name' => 'Hacking corner',
+				'max' => 0
+		]);
 	}
 }

@@ -54,11 +54,9 @@
 									<div class="input-field col s12 m8">
 										<select multiple>
 											<option value="-1" disabled selected>Kies activiteiten</option>
-											<option value="1">Hack corner</option>
-											<option value="2">Create corner</option>
-											<option value="3">Fifa (1v1)</option>
-											<option value="4">Smash Bros WiiU (1v1)</option>
-											<option value="5">Hearthstone (1v1)</option>
+											@foreach ($activities as $activity)
+												<option value="{{ $activity->id }}">{{ $activity->name }}</option>
+											@endforeach
 										</select>
 										<label>Duid extra activiteiten aan</label>
 									</div>

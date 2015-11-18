@@ -13,12 +13,12 @@ class CreateTeamJob extends Job
 	private $publiek_team;
 	private $opties;
 
-	public function __construct($team_optie, $team_naam, $publiek_team = null, $opties = null)
+	public function __construct($team_optie = null, $team_naam = null, $publiek_team = null, $opties = null)
 	{
-		$this->team_optie = $team_optie;
-		$this->team_naam = $team_naam;
-		$this->publiek_team = $publiek_team;
-		$this->opties = $opties;
+		$this->team_optie = $team_optie; // optional, defaults to null
+		$this->team_naam = $team_naam; // optional, defaults to null
+		$this->publiek_team = $publiek_team; // optional, defaults to null
+		$this->opties = $opties; // optional, defaults to null
 	}
 	
 	public function handle()

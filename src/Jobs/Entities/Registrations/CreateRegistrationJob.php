@@ -13,14 +13,18 @@ class CreateRegistrationJob extends Job
 	private $achternaam;
 	private $email;
 	private $activiteiten;
+	/**
+	 * @var
+	 */
+	private $opties;
 
-	public function __construct($voornaam, $achternaam, $email, $activiteiten)
+	public function __construct($voornaam, $achternaam, $email, $activiteiten = null, $opties = null)
 	{
 		$this->voornaam = $voornaam;
 		$this->achternaam = $achternaam;
 		$this->email = $email;
-		$this->activiteiten = $activiteiten;
-		// TODO extra opties!!!
+		$this->activiteiten = $activiteiten; // optional, defaults to null
+		$this->opties = $opties; // optional, defaults to null
 	}
 
 	public function handle(RegistrationRepository $repository)

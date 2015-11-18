@@ -87,6 +87,7 @@
 
 									<div class="input-field col s12 m4 animated fadeIn" v-show="showCompetitions">
 										<select name="team_optie" v-model="teamOption">
+											<option value="-1" disabled selected>Kies een optie</option>
 											<option value="1">Nieuw team</option>
 											<option value="2">Bestaand team</option>
 										</select>

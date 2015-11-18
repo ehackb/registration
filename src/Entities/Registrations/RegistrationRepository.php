@@ -8,8 +8,8 @@ use Fundamentals\Entities\Repositories\BaseRepository;
 
 class RegistrationRepository extends BaseRepository
 {
-	public function __construct()
+	public function __construct(Registration $registration)
 	{
-		parent::__construct(Registration::class);
+		parent::__construct($registration);
 	}
 }

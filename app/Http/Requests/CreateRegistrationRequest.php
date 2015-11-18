@@ -30,9 +30,9 @@ class CreateRegistrationRequest extends Request
 			'achternaam' => 'required',
 			'email' => 'required',
 			'opties' => 'sometimes',
-			'activiteiten' => 'required',
-			'team_optie' => 'required',
-			'team_naam' => 'required',
+			'activiteiten' => 'sometimes',
+			'team_optie' => 'sometimes',
+			'team_naam' => 'required_with:team_optie',
 			'publiek_team' => 'sometimes'
 		];
 	}

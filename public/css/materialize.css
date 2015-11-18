@@ -8465,13 +8465,12 @@ button.picker__today:focus, button.picker__clear:focus, button.picker__close:foc
 html {
   background-color: #e6e6e6; }
 
-body > div.container {
-  padding-top: 5rem; }
-
 @media only screen and (min-width: 601px) {
   .valign {
     -webkit-transform: translateX(25%);
-    transform: translateX(25%); } }
+    transform: translateX(25%); }
+  body > div.container {
+    padding-top: 5rem; } }
 
 footer {
   position: absolute;
@@ -8483,6 +8482,7 @@ footer {
   max-width: 100%; }
 
 .btn-large {
+  width: 100%;
   margin-bottom: 1rem; }
 
 /*# sourceMappingURL=materialize.css.map */

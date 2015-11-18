@@ -88,7 +88,8 @@
 
 									<div class="input-field col s12" style="margin-top: 2rem; margin-bottom: 2rem">
 										<label for="team_size">Grootte van het team</label>
-										<div id="team_size"></div>
+										{{--<div id="team_size"></div>--}}
+										<input type="range" name="team_size" id="team_size">
 									</div>
 
 									<div class="col s4 offset-s8 right-align">
@@ -113,7 +114,6 @@
 			</div>
 		</footer>
 
-		<!--Import jQuery before materialize.js-->
 		<script type="text/javascript" src="{{ asset('/js/jquery.min.js') }}"></script>
 		<script type="text/javascript" src="{{ asset('/js/materialize.min.js') }}"></script>
 		<script type="text/javascript" src="{{ asset('/js/nouislider.min.js') }}"></script>
@@ -121,19 +121,6 @@
 			$(document).ready(function ()
 			{
 				$('select').material_select();
-				var slider = document.getElementById('team_size');
-				noUiSlider.create(slider, {
-					start: [20, 80],
-					connect: true,
-					step: 1,
-					range: {
-						'min': 0,
-						'max': 100
-					},
-					format: wNumb({
-						decimals: 0
-					})
-				});
 			});
 		</script>
 	</body>

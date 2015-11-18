@@ -44,8 +44,9 @@
 									<div class="input-field col s12 m5">
 										<select multiple>
 											<option value="-1" disabled selected>Kies opties</option>
-											<option value="1">Ik wil ontbijten</option>
-											<option value="2">Ik wil een netwerkkabel kopen</option>
+											@foreach ($options as $option)
+												<option value="{{ $option->id }}">{{ $option->name }}</option>
+											@endforeach
 										</select>
 										<label>Extra opties (optioneel)</label>
 									</div>

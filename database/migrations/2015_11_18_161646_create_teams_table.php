@@ -17,6 +17,7 @@ class CreateTeamsTable extends Migration
             $table->increments('id');
             $table->string('name')->unique();
             $table->integer('competition_id')->unsigned();
+			$table->boolean('public')->default(false);
             $table->string('token')->unique()->nullable();
             $table->timestamps();
         });

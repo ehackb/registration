@@ -15,3 +15,5 @@ get('/', function ()
 {
 	return view('register');
 });
+
+get('/admin', 'AuthController@admin')->middleware('auth.basic');

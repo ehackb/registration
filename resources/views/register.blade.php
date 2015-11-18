@@ -96,6 +96,8 @@
 										<label>Kies een competitie</label>
 									</div>
 
+									<!-- TODO show all public teams available if any -->
+
 									<div class="input-field col s12 m8" v-show="showTeams">
 										<input id="team_naam" name="team_naam" type="text" class="validate">
 										<label for="team_naam">Naam of token van het team</label>
@@ -129,6 +131,7 @@
 		<script async>
 			$(document).ready(function ()
 			{
+				Materialize.toast('Voor competities dienen zich minstens 2 EHB studenten aan te melden per team!', 4000);
 				$('select').material_select();
 				$('#competities').material_select(function ()
 				{

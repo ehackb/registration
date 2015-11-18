@@ -87,9 +87,8 @@
 									</div>
 
 									<div class="input-field col s12" style="margin-top: 2rem; margin-bottom: 2rem">
-										<label for="team_size">Grootte van het team</label>
-										{{--<div id="team_size"></div>--}}
 										<input type="range" name="team_size" id="team_size">
+										<label for="team_size" style="padding-top: 1rem;">Grootte van het team</label>
 									</div>
 
 									<div class="col s4 offset-s8 right-align">

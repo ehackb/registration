@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "5c6026b96e6fa11a641b51a6ba976f5e",
-    "content-hash": "5bd58fd976f1ee3e9611bc37c006ec46",
+    "hash": "d16d32347d291fe7dc9aca3b3c6b26ab",
+    "content-hash": "adf947711526dc4e893c8b0dd25d4585",
     "packages": [
         {
             "name": "classpreloader/classpreloader",
@@ -116,6 +116,47 @@
                 "utils"
             ],
             "time": "2015-07-23 00:54:12"
+        },
+        {
+            "name": "deall0c/fundamentals",
+            "version": "v0.0.2",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/Deall0c/fundamentals.git",
+                "reference": "7561e03ae2cc0c7cbdfb794bce83668e795ba5cc"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/Deall0c/fundamentals/zipball/7561e03ae2cc0c7cbdfb794bce83668e795ba5cc",
+                "reference": "7561e03ae2cc0c7cbdfb794bce83668e795ba5cc",
+                "shasum": ""
+            },
+            "require": {
+                "illuminate/bus": "^5.1",
+                "illuminate/console": "^5.1",
+                "illuminate/database": "^5.1",
+                "illuminate/mail": "^5.1",
+                "illuminate/pagination": "^5.1",
+                "illuminate/support": "^5.1"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Fundamentals\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Wannes Gennar",
+                    "email": "wannes.gennar@gmail.com"
+                }
+            ],
+            "description": "Provides fundamental building blocks for clean Laravel applications",
+            "time": "2015-09-13 08:59:25"
         },
         {
             "name": "dnoegel/php-xdg-base-dir",

@@ -28,6 +28,12 @@ class CreateRegistrationJob extends Job
 
 	public function handle(RegistrationRepository $repository)
 	{
-		dd($this);
+		$repository->create([
+				'fname' => $this->voornaam,
+				'lname' => $this->achternaam,
+				'email' => $this->email,
+				'ip_address' => $_SERVER['REMOTE_ADDR']
+			// TODO options, activiteiten && team etc
+		]);
 	}
 }

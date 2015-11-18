@@ -15,8 +15,8 @@ class CreateRegistrationsTable extends Migration
         Schema::create('registrations', function (Blueprint $table)
         {
             $table->increments('id');
-            $table->string('name');
-			$table->string('gamertag');
+            $table->string('fname');
+            $table->string('lname');
             $table->string('email')->unique();
             $table->string('ip_address');
             $table->timestamps();

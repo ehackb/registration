@@ -8,37 +8,13 @@ use Fundamentals\Jobs\Job;
 
 class CreateRegistrationJob extends Job
 {
-	/**
-	 * @var
-	 */
 	private $voornaam;
-	/**
-	 * @var
-	 */
 	private $achternaam;
-	/**
-	 * @var
-	 */
 	private $email;
-	/**
-	 * @var
-	 */
 	private $opties;
-	/**
-	 * @var
-	 */
 	private $activiteiten;
-	/**
-	 * @var
-	 */
 	private $team_optie;
-	/**
-	 * @var
-	 */
 	private $team_naam;
-	/**
-	 * @var
-	 */
 	private $publiek_team;
 
 	public function __construct($voornaam, $achternaam, $email, $activiteiten, $team_optie, $team_naam, $publiek_team = null, $opties = null)

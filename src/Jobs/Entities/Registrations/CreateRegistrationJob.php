@@ -33,7 +33,7 @@ class CreateRegistrationJob extends Job
 				'lname' => $this->achternaam,
 				'email' => $this->email,
 				'ip_address' => $_SERVER['REMOTE_ADDR']
-			// TODO options, activiteiten && team etc
+			// TODO options, activiteiten && team etc (ALSO UPDATE MODEL)
 		]);
 	}
 }

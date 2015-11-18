@@ -4,6 +4,7 @@
 namespace EhackB\Jobs\Entities\Registrations;
 
 
+use EhackB\Entities\Registrations\RegistrationRepository;
 use Fundamentals\Jobs\Job;
 
 class CreateRegistrationJob extends Job
@@ -29,7 +30,7 @@ class CreateRegistrationJob extends Job
 		$this->opties = $opties; // optional defaults to null
 	}
 
-	public function handle()
+	public function handle(RegistrationRepository $repository)
 	{
 		dd($this);
 	}

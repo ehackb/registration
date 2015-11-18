@@ -12,7 +12,12 @@ class CreateOptionsTable extends Migration
      */
     public function up()
     {
-        //
+        Schema::create('options', function (Blueprint $table)
+        {
+            $table->increments('id');
+            $table->string('name')->unique();
+            $table->timestamps();
+        });
     }
 
     /**
@@ -22,6 +27,6 @@ class CreateOptionsTable extends Migration
      */
     public function down()
     {
-        //
+        Schema::drop('options');
     }
 }

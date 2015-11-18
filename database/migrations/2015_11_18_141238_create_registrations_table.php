@@ -3,7 +3,7 @@
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateRegisrationsTable extends Migration
+class CreateRegistrationsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -12,7 +12,15 @@ class CreateRegisrationsTable extends Migration
      */
     public function up()
     {
-        //
+        Schema::create('registrations', function (Blueprint $table)
+        {
+            $table->increments('id');
+            $table->string('name');
+			$table->string('gamertag');
+            $table->string('email')->unique();
+            $table->string('ip_address');
+            $table->timestamps();
+        });
     }
 
     /**
@@ -22,6 +30,6 @@ class CreateRegisrationsTable extends Migration
      */
     public function down()
     {
-        //
+		Schema::drop('registrations');
     }
 }

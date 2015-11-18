@@ -29,12 +29,12 @@ class CreateTeamJob extends Job
 	
 	public function handle(TeamRepository $repository)
 	{
-		$repository->create([
+		// TODO check if we *need* to create a team
+		return $repository->create([
 				'name' => $this->team_naam,
 				'competition_id' => $this->team_competitie,
-				'public' => $this->publiek_team == null,
-				'token' => uniqid($this->team_naam)
+				'public' => $this->publiek_team != null,
+				'token' => uniqid()
 		]);
-		dd($this);
 	}
 }

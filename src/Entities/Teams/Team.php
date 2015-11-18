@@ -9,4 +9,6 @@ use Fundamentals\Entities\Models\BaseModel;
 class Team extends BaseModel
 {
 	protected $table = 'teams';
+
+	protected $fillable = ['name', 'competition_id', 'public', 'token'];
 }

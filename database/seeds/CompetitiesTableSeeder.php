@@ -24,7 +24,7 @@ class CompetitiesTableSeeder extends \Illuminate\Database\Seeder
 
 		\EhackB\Entities\Competitions\Competition::create([
 				'name' => 'Smash bros WiiU (1v1)',
-				'max' => 32,
+				'max' => 64,
 				'teams' => false
 		]);
 

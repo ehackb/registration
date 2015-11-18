@@ -8465,28 +8465,24 @@ button.picker__today:focus, button.picker__clear:focus, button.picker__close:foc
 html {
   background-color: #e6e6e6; }
 
-body {
-  position: absolute;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  min-height: 100vh;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  bottom: 0;
-  width: 100%; }
-
 body > div.container {
   padding-top: 5rem; }
 
+@media only screen and (min-width: 601px) {
+  .valign {
+    -webkit-transform: translateX(25%);
+    transform: translateX(25%); } }
+
 footer {
-  position: fixed;
+  position: absolute;
   bottom: 0;
   width: 100%;
   text-align: center; }
 
 .logo {
   max-width: 100%; }
+
+.btn-large {
+  margin-bottom: 1rem; }
 
 /*# sourceMappingURL=materialize.css.map */

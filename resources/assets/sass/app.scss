@@ -3,23 +3,21 @@ html
 	background-color: darken(white, 10%);
 }
 
-body {
-	position: absolute;
-	display: flex;
-	min-height: 100vh;
-	flex-direction: column;
-	bottom: 0;
-	width: 100%;
-}
-
-body>div.container
+body > div.container
 {
 	padding-top: 5rem;
 }
 
+@media #{$medium-and-up} {
+	.valign
+	{
+		transform: translateX(25%);
+	}
+}
+
 footer
 {
-	position: fixed;
+	position: absolute;
 	bottom: 0;
 	width: 100%;
 	text-align: center;
@@ -28,4 +26,9 @@ footer
 .logo
 {
 	max-width: 100%;
+}
+
+.btn-large
+{
+	margin-bottom: 1rem;
 }

@@ -27,8 +27,8 @@ class CreateRegistrationRequest extends Request
 			'email' => 'required',
 			'opties' => 'sometimes',
 			'activiteiten' => 'sometimes',
-				'team_naam' => 'required_with:team_optie|unique:teams,name',
-				'team_competitie' => 'required_with:team_optie',
+			'team_competitie' => 'sometimes|exists:competitions,id',
+			'team_naam' => 'required_with:team_competitie|unique:teams,name',
 			'publiek_team' => 'sometimes'
 		];
 	}

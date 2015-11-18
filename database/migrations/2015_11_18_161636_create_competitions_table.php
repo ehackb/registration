@@ -16,6 +16,7 @@ class CreateCompetitionsTable extends Migration
         {
             $table->increments('id');
             $table->string('name')->unique();
+            $table->boolean('teams')->default(true);
             $table->integer('max')->unsigned();
             $table->timestamps();
         });

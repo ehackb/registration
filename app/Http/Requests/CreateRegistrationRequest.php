@@ -33,6 +33,7 @@ class CreateRegistrationRequest extends Request
 			'activiteiten' => 'sometimes',
 			'team_optie' => 'sometimes',
 			'team_naam' => 'required_with:team_optie',
+				'team_competitie' => 'required_with:team_optie',
 			'publiek_team' => 'sometimes'
 		];
 	}

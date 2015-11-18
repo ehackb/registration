@@ -31,7 +31,7 @@
 							  <span class="white-text">
 								  <ul class="collection">
 									  @foreach ($errors->all() as $error)
-										  <li class="collection-item">- {{ $error }}</li>
+										  <li class="transparent collection-item">- {{ $error }}</li>
 									  @endforeach
 								  </ul>
 							  </span>
@@ -85,7 +85,7 @@
 										</a>
 									</div>
 
-									<div class="input-field col s12 m4 animated fadeIn" v-show="showCompetitions">
+									<div class="input-field col s12 m4" v-show="showCompetitions">
 										<select name="team_optie" v-model="teamOption">
 											<option value="-1" disabled selected>Kies een optie</option>
 											<option value="1">Nieuw team</option>
@@ -94,12 +94,27 @@
 										<label>Kies voor een team</label>
 									</div>
 
-									<div class="input-field col s12 m5 animated fadeIn" v-show="showCompetitions">
+									<div class="input-field col s12 m8" v-show="showCompetitions">
+										<select name="team_competitie" v-model="teamOption">
+											<option value="-1" disabled selected>Kies een optie</option>
+											@foreach ($competitions as $competition)
+												<option value="{{ $competition->id }}">{{ $competition->name }}</option>
+											@endforeach
+										</select>
+										<label>Kies een competitie</label>
+									</div>
+
+									<div class="input-field col s12 m4" v-show="showCompetitions">
 										<input id="team_naam" name="team_naam" type="text" class="validate">
 										<label for="team_naam">Naam of token van het team</label>
 									</div>
 
-									<div class="input-field col s12 m3 animated fadeIn" style="padding-top: 1rem"
+									<div class="input-field col s12 m5" v-show="showCompetitions">
+										<input id="gamertag" name="gamertag" type="text" class="validate">
+										<label for="gamertag">Gamertag (optioneel)</label>
+									</div>
+
+									<div class="input-field col s12 m3" style="padding-top: 1rem"
 										 v-show="showCompetitions">
 										<input type="checkbox" id="publiek_team" name="publiek_team"/>
 										<label for="publiek_team">Publiek team</label>

@@ -80,12 +80,12 @@
 									</div>
 
 									<div class="input-field col s12 m4">
-										<a class="waves-effect waves-light btn-large">
-											Toon competities
+										<a class="waves-effect waves-light btn-large" @click="toggleCompetitions">
+										Competitie
 										</a>
 									</div>
 
-									<div class="input-field col s12 m4">
+									<div class="input-field col s12 m4 animated fadeIn" v-show="showCompetitions">
 										<select name="team_optie">
 											<option value="1">Nieuw team</option>
 											<option value="2">Bestaand team</option>
@@ -93,12 +93,13 @@
 										<label>Kies voor een team</label>
 									</div>
 
-									<div class="input-field col s12 m5">
+									<div class="input-field col s12 m5 animated fadeIn" v-show="showCompetitions">
 										<input id="team_naam" name="team_naam" type="text" class="validate">
 										<label for="team_naam">Naam van het team</label>
 									</div>
 
-									<div class="input-field col s12 m3" style="padding-top: 1rem">
+									<div class="input-field col s12 m3 animated fadeIn" style="padding-top: 1rem"
+										 v-show="showCompetitions">
 										<input type="checkbox" id="publiek_team" name="publiek_team"/>
 										<label for="publiek_team">Publiek team</label>
 									</div>
@@ -120,6 +121,8 @@
 		<script type="text/javascript" src="{{ asset('/js/jquery.min.js') }}"></script>
 		<script type="text/javascript" src="{{ asset('/js/materialize.min.js') }}"></script>
 		<script type="text/javascript" src="{{ asset('/js/nouislider.min.js') }}"></script>
+		<script type="text/javascript" src="{{ asset('/js/vue.min.js') }}"></script>
+		<script type="text/javascript" src="{{ asset('/js/app.js') }}"></script>
 		<script async>
 			$(document).ready(function ()
 			{

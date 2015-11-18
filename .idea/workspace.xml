@@ -3,9 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="8623cd24-25a9-4be9-b43a-20d189a0facd" name="Default" comment="added fillable">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Http/Requests/CreateRegistrationRequest.php" afterPath="$PROJECT_DIR$/app/Http/Requests/CreateRegistrationRequest.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Http/Requests/Request.php" afterPath="$PROJECT_DIR$/app/Http/Requests/Request.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/register.blade.php" afterPath="$PROJECT_DIR$/resources/views/register.blade.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Jobs/Entities/Teams/CreateTeamJob.php" afterPath="$PROJECT_DIR$/src/Jobs/Entities/Teams/CreateTeamJob.php" />
     </list>
     <ignored path="registration.iws" />
@@ -48,9 +46,11 @@
       <file leaf-file-name="CreateTeamJob.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Jobs/Entities/Teams/CreateTeamJob.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.6801386">
-              <caret line="31" column="0" selection-start-line="31" selection-start-column="0" selection-end-line="31" selection-end-column="0" />
-              <folding />
+            <state vertical-scroll-proportion="0.045034643">
+              <caret line="7" column="26" selection-start-line="7" selection-start-column="26" selection-end-line="7" selection-end-column="26" />
+              <folding>
+                <marker date="1447884424363" expanded="true" signature="96:164" placeholder="..." />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -613,7 +613,13 @@
       <option name="project" value="LOCAL" />
       <updated>1447882961835</updated>
     </task>
-    <option name="localTasksCounter" value="39" />
+    <task id="LOCAL-00039" summary="refactored out team_option parameter (detect dynamicly)">
+      <created>1447884382486</created>
+      <option name="number" value="00039" />
+      <option name="project" value="LOCAL" />
+      <updated>1447884382486</updated>
+    </task>
+    <option name="localTasksCounter" value="40" />
     <servers />
   </component>
   <component name="TodoView">
@@ -627,7 +633,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="1920" y="29" width="1920" height="1051" extended-state="6" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24121405" sideWeight="0.4962162" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32901832" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -665,8 +671,6 @@
   <component name="VcsManagerConfiguration">
     <option name="OFFER_MOVE_TO_ANOTHER_CHANGELIST_ON_PARTIAL_COMMIT" value="false" />
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
-    <MESSAGE value="toevoegen options composer" />
-    <MESSAGE value="toevoegen activiteiten composer" />
     <MESSAGE value="design tweaks for retina display" />
     <MESSAGE value="small tweaks from meeting" />
     <MESSAGE value="setup migrations for competitions" />
@@ -690,7 +694,9 @@
     <MESSAGE value="changed UI for hiding non team competitions" />
     <MESSAGE value="implemented registration job" />
     <MESSAGE value="added fillable" />
-    <option name="LAST_COMMIT_MESSAGE" value="added fillable" />
+    <MESSAGE value="refactored out team_option parameter (detect dynamicly)" />
+    <MESSAGE value="fix invalid import" />
+    <option name="LAST_COMMIT_MESSAGE" value="fix invalid import" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
@@ -1083,9 +1089,11 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Jobs/Entities/Teams/CreateTeamJob.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.6801386">
-          <caret line="31" column="0" selection-start-line="31" selection-start-column="0" selection-end-line="31" selection-end-column="0" />
-          <folding />
+        <state vertical-scroll-proportion="0.045034643">
+          <caret line="7" column="26" selection-start-line="7" selection-start-column="26" selection-end-line="7" selection-end-column="26" />
+          <folding>
+            <marker date="1447884424363" expanded="true" signature="96:164" placeholder="..." />
+          </folding>
         </state>
       </provider>
     </entry>

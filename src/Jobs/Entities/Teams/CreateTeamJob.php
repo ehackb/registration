@@ -5,7 +5,6 @@ namespace EhackB\Jobs\Entities\Teams;
 
 
 use EhackB\Entities\Teams\TeamRepository;
-use EhackB\Exceptions\InvalidInputException;
 use Fundamentals\Jobs\Job;
 
 class CreateTeamJob extends Job

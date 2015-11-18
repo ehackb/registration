@@ -9,5 +9,5 @@ class Registration extends BaseModel
 {
 	protected $table = 'registrations';
 
-	protected $fillable = ['fname', 'lname', 'email', 'ip_address'];
+	protected $fillable = ['fname', 'lname', 'email', 'ip_address', 'team_id'];
 }

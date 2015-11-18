@@ -60,7 +60,7 @@
 									</div>
 
 									<div class="input-field col s12 m5">
-										<select multiple name="opties">
+										<select id="options" multiple name="opties[]">
 											<option value="-1" disabled selected>Kies opties</option>
 											@foreach ($options as $option)
 												<option value="{{ $option->id }}">{{ $option->name }}</option>
@@ -70,7 +70,7 @@
 									</div>
 
 									<div class="input-field col s12 m8">
-										<select multiple name="activiteiten">
+										<select multiple name="activiteiten[]">
 											<option value="-1" disabled selected>Kies activiteiten</option>
 											@foreach ($activities as $activity)
 												<option value="{{ $activity->id }}">{{ $activity->name }}</option>

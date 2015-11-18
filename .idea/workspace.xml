@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="8623cd24-25a9-4be9-b43a-20d189a0facd" name="Default" comment="linked teams to users">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/database/migrations/2015_11_18_231250_create_options_registrations_table.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/database/migrations/2015_11_18_231306_create_activities_registrations_table.php" />
+    <list default="true" id="8623cd24-25a9-4be9-b43a-20d189a0facd" name="Default" comment="setup pivot migrations">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/register.blade.php" afterPath="$PROJECT_DIR$/resources/views/register.blade.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Entities/Registrations/Registration.php" afterPath="$PROJECT_DIR$/src/Entities/Registrations/Registration.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Jobs/Entities/Registrations/CreateRegistrationJob.php" afterPath="$PROJECT_DIR$/src/Jobs/Entities/Registrations/CreateRegistrationJob.php" />
     </list>
     <ignored path="registration.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -43,23 +44,33 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="CreateRegistrationJob.php" pinned="false" current-in-tab="false">
+      <file leaf-file-name="CreateRegistrationJob.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Jobs/Entities/Registrations/CreateRegistrationJob.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-14.419354">
-              <caret line="23" column="37" selection-start-line="23" selection-start-column="37" selection-end-line="23" selection-end-column="37" />
+            <state vertical-scroll-proportion="0.5681293">
+              <caret line="29" column="42" selection-start-line="29" selection-start-column="42" selection-end-line="29" selection-end-column="42" />
               <folding>
-                <element signature="e#104#161#0#PHP" expanded="true" />
+                <element signature="e#104#139#0#PHP" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="2015_11_18_231306_create_activities_registrations_table.php" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/database/migrations/2015_11_18_231306_create_activities_registrations_table.php">
+      <file leaf-file-name="RegistrationRepository.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Entities/Registrations/RegistrationRepository.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.27880183">
-              <caret line="12" column="19" selection-start-line="12" selection-start-column="19" selection-end-line="12" selection-end-column="19" />
+            <state vertical-scroll-proportion="-7.096774">
+              <caret line="10" column="34" selection-start-line="10" selection-start-column="34" selection-end-line="10" selection-end-column="34" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Registration.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Entities/Registrations/Registration.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-7.806452">
+              <caret line="11" column="76" selection-start-line="11" selection-start-column="76" selection-end-line="11" selection-end-column="76" />
               <folding />
             </state>
           </provider>
@@ -122,20 +133,20 @@
         <option value="$PROJECT_DIR$/database/seeds/CompetitiesTableSeeder.php" />
         <option value="$PROJECT_DIR$/resources/assets/js/app.js" />
         <option value="$PROJECT_DIR$/database/seeds/ActivitiesTableSeeder.php" />
-        <option value="$PROJECT_DIR$/src/Entities/Registrations/Registration.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/RegistrationController.php" />
         <option value="$PROJECT_DIR$/app/Exceptions/Handler.php" />
         <option value="$PROJECT_DIR$/src/Exceptions/InvalidInputException.php" />
         <option value="$PROJECT_DIR$/app/Http/Requests/Request.php" />
         <option value="$PROJECT_DIR$/src/Entities/Competitions/CompetitionRepository.php" />
         <option value="$PROJECT_DIR$/app/Http/Requests/CreateRegistrationRequest.php" />
-        <option value="$PROJECT_DIR$/resources/views/register.blade.php" />
         <option value="$PROJECT_DIR$/src/Jobs/Entities/Teams/CreateTeamJob.php" />
         <option value="$PROJECT_DIR$/database/migrations/2015_11_18_141238_create_registrations_table.php" />
         <option value="$PROJECT_DIR$/database/migrations/2015_11_18_225151_create_team_registrations_table.php" />
-        <option value="$PROJECT_DIR$/src/Jobs/Entities/Registrations/CreateRegistrationJob.php" />
         <option value="$PROJECT_DIR$/database/migrations/2015_11_18_231250_create_options_registrations_table.php" />
         <option value="$PROJECT_DIR$/database/migrations/2015_11_18_231306_create_activities_registrations_table.php" />
+        <option value="$PROJECT_DIR$/resources/views/register.blade.php" />
+        <option value="$PROJECT_DIR$/src/Jobs/Entities/Registrations/CreateRegistrationJob.php" />
+        <option value="$PROJECT_DIR$/src/Entities/Registrations/Registration.php" />
       </list>
     </option>
   </component>
@@ -209,7 +220,11 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
+              <option name="myItemId" value="resources" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="views" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -223,87 +238,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Jobs" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Entities" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="registration" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="registration" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Jobs" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Entities" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Registrations" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="registration" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="registration" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="database" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="registration" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="registration" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="database" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="migrations" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="registration" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="registration" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
+              <option name="myItemId" value="resources" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -635,7 +570,13 @@
       <option name="project" value="LOCAL" />
       <updated>1447887831063</updated>
     </task>
-    <option name="localTasksCounter" value="46" />
+    <task id="LOCAL-00046" summary="setup pivot migrations">
+      <created>1447888665523</created>
+      <option name="number" value="00046" />
+      <option name="project" value="LOCAL" />
+      <updated>1447888665523</updated>
+    </task>
+    <option name="localTasksCounter" value="47" />
     <servers />
   </component>
   <component name="TodoView">
@@ -653,6 +594,7 @@
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24387646" sideWeight="0.4962162" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32901832" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32972974" sideWeight="0.5" order="10" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32960597" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32901832" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -660,7 +602,6 @@
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32901832" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2550586" sideWeight="0.50378376" order="3" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
@@ -687,7 +628,6 @@
   <component name="VcsManagerConfiguration">
     <option name="OFFER_MOVE_TO_ANOTHER_CHANGELIST_ON_PARTIAL_COMMIT" value="false" />
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
-    <MESSAGE value="setup teams seeder" />
     <MESSAGE value="small text tweaks" />
     <MESSAGE value="setup registration route &amp;&amp; form submission" />
     <MESSAGE value="setup validation structure" />
@@ -712,7 +652,8 @@
     <MESSAGE value="added TODO &amp;&amp; toast for 2 student limit" />
     <MESSAGE value="bijwerken aanmaken teams" />
     <MESSAGE value="linked teams to users" />
-    <option name="LAST_COMMIT_MESSAGE" value="linked teams to users" />
+    <MESSAGE value="setup pivot migrations" />
+    <option name="LAST_COMMIT_MESSAGE" value="setup pivot migrations" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
@@ -835,13 +776,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/js/materialize.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-1.9422876">
-          <caret line="2855" column="2" selection-start-line="2855" selection-start-column="2" selection-end-line="2855" selection-end-column="2" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/vendor/deall0c/fundamentals/src/Entities/Repositories/BaseRepository.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.13894737">
@@ -854,6 +788,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.33333334">
           <caret line="357" column="16" selection-start-line="357" selection-start-column="16" selection-end-line="357" selection-end-column="16" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -861,13 +796,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.7380952">
           <caret line="32" column="13" selection-start-line="32" selection-start-column="13" selection-end-line="32" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Providers/ComposerProvider.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.2281106">
-          <caret line="9" column="161" selection-start-line="9" selection-start-column="161" selection-end-line="9" selection-end-column="161" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -960,13 +889,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Entities/Registrations/Registration.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.27944574">
-          <caret line="11" column="66" selection-start-line="11" selection-start-column="66" selection-end-line="11" selection-end-column="66" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/Exceptions/Handler.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.79676676">
@@ -985,14 +907,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.3556582">
           <caret line="62" column="88" selection-start-line="62" selection-start-column="31" selection-end-line="62" selection-end-column="88" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Entities/Registrations/RegistrationRepository.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.20323326">
-          <caret line="8" column="28" selection-start-line="8" selection-start-column="28" selection-end-line="14" selection-end-column="1" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1019,13 +933,6 @@
       <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
         <state>
           <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/register.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.4896074">
-          <caret line="98" column="84" selection-start-line="98" selection-start-column="84" selection-end-line="98" selection-end-column="84" />
         </state>
       </provider>
     </entry>
@@ -1080,21 +987,64 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Jobs/Entities/Registrations/CreateRegistrationJob.php">
+    <entry file="file://$PROJECT_DIR$/database/migrations/2015_11_18_231306_create_activities_registrations_table.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-14.419354">
-          <caret line="23" column="37" selection-start-line="23" selection-start-column="37" selection-end-line="23" selection-end-column="37" />
+        <state vertical-scroll-proportion="0.27944574">
+          <caret line="12" column="19" selection-start-line="12" selection-start-column="19" selection-end-line="12" selection-end-column="19" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Providers/ComposerProvider.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.27944574">
+          <caret line="11" column="1" selection-start-line="11" selection-start-column="1" selection-end-line="11" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/js/materialize.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-1.9344074">
+          <caret line="2855" column="2" selection-start-line="2855" selection-start-column="2" selection-end-line="2855" selection-end-column="2" />
           <folding>
-            <element signature="e#104#161#0#PHP" expanded="true" />
+            <marker date="1447612282000" expanded="true" signature="209652:209681" placeholder="..." />
+            <marker date="1447612282000" expanded="true" signature="209942:209952" placeholder="..." />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/database/migrations/2015_11_18_231306_create_activities_registrations_table.php">
+    <entry file="file://$PROJECT_DIR$/resources/views/register.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.27880183">
-          <caret line="12" column="19" selection-start-line="12" selection-start-column="19" selection-end-line="12" selection-end-column="19" />
+        <state vertical-scroll-proportion="0.11085451">
+          <caret line="69" column="20" selection-start-line="69" selection-start-column="20" selection-end-line="69" selection-end-column="20" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Entities/Registrations/RegistrationRepository.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-7.096774">
+          <caret line="10" column="34" selection-start-line="10" selection-start-column="34" selection-end-line="10" selection-end-column="34" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Entities/Registrations/Registration.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-7.806452">
+          <caret line="11" column="76" selection-start-line="11" selection-start-column="76" selection-end-line="11" selection-end-column="76" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Jobs/Entities/Registrations/CreateRegistrationJob.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.5681293">
+          <caret line="29" column="42" selection-start-line="29" selection-start-column="42" selection-end-line="29" selection-end-column="42" />
+          <folding>
+            <element signature="e#104#139#0#PHP" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

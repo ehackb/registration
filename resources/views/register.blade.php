@@ -26,7 +26,8 @@
 					<div class="card">
 						<div class="card-content">
 							<div class="row">
-								<form class="col s12">
+								<form class="col s12" method="POST" action="{{ route('register') }}">
+									{!! csrf_field() !!}
 
 									<div class="input-field col s12 m6">
 										<input id="last_name" type="text" class="validate">

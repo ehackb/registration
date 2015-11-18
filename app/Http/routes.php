@@ -16,4 +16,6 @@ get('/', function ()
 	return view('register');
 });
 
+post('/register', 'RegistrationController@register')->name('register');
+
 get('/admin', 'AuthController@admin')->middleware('auth.basic');

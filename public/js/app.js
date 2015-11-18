@@ -1,7 +1,7 @@
 var app = new Vue({
 	el: 'body',
 	data: {
-		showCompetitions: true
+		showCompetitions: true,
 	},
 	methods: {
 		toggleCompetitions: function ()

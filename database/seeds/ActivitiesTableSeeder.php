@@ -20,5 +20,7 @@ class ActivitiesTableSeeder extends \Illuminate\Database\Seeder
 			'name' => 'Hearthstone (1v1)',
 			'max' => 16
 		]);
+
+		// TODO corners!
 	}
 }

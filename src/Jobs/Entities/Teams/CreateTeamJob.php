@@ -5,11 +5,11 @@ namespace EhackB\Jobs\Entities\Teams;
 
 
 use EhackB\Entities\Teams\TeamRepository;
+use EhackB\Exceptions\InvalidInputException;
 use Fundamentals\Jobs\Job;
 
 class CreateTeamJob extends Job
 {
-	private $team_optie;
 	private $team_naam;
 	private $publiek_team;
 	private $opties;
@@ -18,9 +18,8 @@ class CreateTeamJob extends Job
 	 */
 	private $team_competitie;
 
-	public function __construct($team_optie = null, $team_naam = null, $team_competitie = null, $publiek_team = null, $opties = null)
+	public function __construct($team_naam = null, $team_competitie = null, $publiek_team = null, $opties = null)
 	{
-		$this->team_optie = $team_optie; // optional, defaults to null
 		$this->team_naam = $team_naam; // optional, defaults to null
 		$this->publiek_team = $publiek_team; // optional, defaults to null
 		$this->opties = $opties; // optional, defaults to null
@@ -30,6 +29,8 @@ class CreateTeamJob extends Job
 	public function handle(TeamRepository $repository)
 	{
 		// TODO check if we *need* to create a team
+
+		dd($this);
 		return $repository->create([
 				'name' => $this->team_naam,
 				'competition_id' => $this->team_competitie,

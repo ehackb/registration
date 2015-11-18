@@ -96,16 +96,7 @@
 										<label>Kies een competitie</label>
 									</div>
 
-									<div class="input-field col s12 m4" v-show="showTeams">
-										<select name="team_optie" v-model="teamOption">
-											<option value="-1" disabled selected>Kies een optie</option>
-											<option value="1">Nieuw team</option>
-											<option value="2">Bestaand team</option>
-										</select>
-										<label>Kies voor een team</label>
-									</div>
-
-									<div class="input-field col s12 m4" v-show="showTeams">
+									<div class="input-field col s12 m8" v-show="showTeams">
 										<input id="team_naam" name="team_naam" type="text" class="validate">
 										<label for="team_naam">Naam of token van het team</label>
 									</div>

@@ -8463,7 +8463,9 @@ button.picker__today:focus, button.picker__clear:focus, button.picker__close:foc
     margin-bottom: 5em; } }
 
 html {
-  background-color: #e6e6e6; }
+  background: url(/header.png) no-repeat center center fixed;
+  background-size: cover;
+}
 
 @media only screen and (min-width: 601px) {
   .valign {
@@ -8471,12 +8473,6 @@ html {
     transform: translateX(25%); }
   body > div.container {
     padding-top: 5rem; } }
-
-footer {
-  position: absolute;
-  bottom: 0;
-  width: 100%;
-  text-align: center; }
 
 .logo {
   max-width: 100%; }

@@ -71,10 +71,10 @@
 
 									<div class="input-field col s12 m4">
 										<select>
-											<option value="1">Ik wil een nieuw team maken</option>
-											<option value="2">Ik wil een bestaand team joinen</option>
+											<option value="1">Nieuw team</option>
+											<option value="2">Bestaand team</option>
 										</select>
-										<label>Kies voor een nieuw of bestaand team</label>
+										<label>Kies voor een team</label>
 									</div>
 
 									<div class="input-field col s12 m5">
@@ -85,11 +85,6 @@
 									<div class="input-field col s12 m3" style="padding-top: 1rem">
 										<input type="checkbox" id="test6" />
 										<label for="test6">Publiek team</label>
-									</div>
-
-									<div class="input-field col s12" style="margin-top: 2rem; margin-bottom: 2rem">
-										<input type="range" name="team_size" id="team_size">
-										<label for="team_size" style="padding-top: 1rem;">Grootte van het team</label>
 									</div>
 
 									<div class="col s4 offset-s8 right-align">
@@ -105,14 +100,6 @@
 				</div>
 			</div>
 		</div>
-
-		<footer class="page-footer hide-on-small-only">
-			<div class="footer-copyright">
-				<div class="container">
-					© 2015 Developed, Designed and cursed by Wannes Gennar
-				</div>
-			</div>
-		</footer>
 
 		<script type="text/javascript" src="{{ asset('/js/jquery.min.js') }}"></script>
 		<script type="text/javascript" src="{{ asset('/js/materialize.min.js') }}"></script>

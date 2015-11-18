@@ -1,6 +1,10 @@
 html
 {
-	background-color: darken(white, 10%);
+	background: url(/header.png) no-repeat center center fixed;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
 }
 
 @media #{$medium-and-up} {
@@ -13,14 +17,6 @@ html
 	{
 		padding-top: 5rem;
 	}
-}
-
-footer
-{
-	position: absolute;
-	bottom: 0;
-	width: 100%;
-	text-align: center;
 }
 
 .logo

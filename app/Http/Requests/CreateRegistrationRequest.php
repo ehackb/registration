@@ -26,7 +26,14 @@ class CreateRegistrationRequest extends Request
 	public function rules()
 	{
 		return [
-
+			'voornaam' => 'required',
+			'achternaam' => 'required',
+			'email' => 'required',
+			'opties' => 'sometimes',
+			'activiteiten' => 'required',
+			'team_optie' => 'required',
+			'team_naam' => 'required',
+			'publiek_team' => 'sometimes'
 		];
 	}
 }

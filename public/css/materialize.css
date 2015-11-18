@@ -8481,4 +8481,10 @@ html {
   width: 100%;
   margin-bottom: 1rem; }
 
+.collection, .collection > .collection-item
+{
+  border: none;
+  background-color: transparent;
+}
+
 /*# sourceMappingURL=materialize.css.map */

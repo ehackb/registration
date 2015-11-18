@@ -23,6 +23,23 @@
 
 			<div class="row animated fadeInUp valign-wrapper">
 				<div class="col s12 m8 valign">
+
+					@if (sizeof($errors) > 0)
+						<div class="row">
+							<div class="col s12">
+								<div class="card-panel red">
+							  <span class="white-text">
+								  <ul class="collection">
+									  @foreach ($errors->all() as $error)
+										  <li class="collection-item">- {{ $error }}</li>
+									  @endforeach
+								  </ul>
+							  </span>
+								</div>
+							</div>
+						</div>
+					@endif
+
 					<div class="card">
 						<div class="card-content">
 							<div class="row">
@@ -30,20 +47,20 @@
 									{!! csrf_field() !!}
 
 									<div class="input-field col s12 m6">
-										<input id="last_name" type="text" class="validate">
-										<label for="last_name">Voornaam</label>
+										<input id="voornaam" name="voornaam" type="text" class="validate">
+										<label for="voornaam">Voornaam</label>
 									</div>
 									<div class="input-field col s12 m6">
-										<input id="last_name" type="text" class="validate">
-										<label for="last_name">Achternaam</label>
+										<input id="achternaam" name="achternaam" type="text" class="validate">
+										<label for="achternaam">Achternaam</label>
 									</div>
 									<div class="input-field col s12 m7">
-										<input id="email" type="email" class="validate">
+										<input id="email" name="email" type="email" class="validate">
 										<label for="email">Email</label>
 									</div>
 
 									<div class="input-field col s12 m5">
-										<select multiple>
+										<select multiple name="opties">
 											<option value="-1" disabled selected>Kies opties</option>
 											@foreach ($options as $option)
 												<option value="{{ $option->id }}">{{ $option->name }}</option>
@@ -53,7 +70,7 @@
 									</div>
 
 									<div class="input-field col s12 m8">
-										<select multiple>
+										<select multiple name="activiteiten">
 											<option value="-1" disabled selected>Kies activiteiten</option>
 											@foreach ($activities as $activity)
 												<option value="{{ $activity->id }}">{{ $activity->name }}</option>
@@ -69,7 +86,7 @@
 									</div>
 
 									<div class="input-field col s12 m4">
-										<select>
+										<select name="team_optie">
 											<option value="1">Nieuw team</option>
 											<option value="2">Bestaand team</option>
 										</select>
@@ -77,13 +94,13 @@
 									</div>
 
 									<div class="input-field col s12 m5">
-										<input id="team_name" type="text" class="validate">
-										<label for="team_name">Naam van het team</label>
+										<input id="team_naam" name="team_naam" type="text" class="validate">
+										<label for="team_naam">Naam van het team</label>
 									</div>
 
 									<div class="input-field col s12 m3" style="padding-top: 1rem">
-										<input type="checkbox" id="test6" />
-										<label for="test6">Publiek team</label>
+										<input type="checkbox" id="publiek_team" name="publiek_team"/>
+										<label for="publiek_team">Publiek team</label>
 									</div>
 
 									<div class="col s4 offset-s8 right-align">

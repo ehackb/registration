@@ -15,5 +15,10 @@ class ActivitiesTableSeeder extends \Illuminate\Database\Seeder
 				'name' => 'Hacking corner',
 				'max' => 0
 		]);
+
+		\EhackB\Entities\Activities\Activity::create([
+				'name' => 'Casual gaming',
+				'max' => 0
+		]);
 	}
 }

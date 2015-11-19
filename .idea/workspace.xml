@@ -1,9 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="8623cd24-25a9-4be9-b43a-20d189a0facd" name="Default" comment="designed registration email">
+    <list default="true" id="8623cd24-25a9-4be9-b43a-20d189a0facd" name="Default" comment="recompressed CSS">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/emails/registered.blade.php" afterPath="$PROJECT_DIR$/resources/views/emails/registered.blade.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/emails/reregister.blade.php" afterPath="$PROJECT_DIR$/resources/views/emails/reregister.blade.php" />
     </list>
     <ignored path="registration.iws" />
@@ -46,11 +45,11 @@
       <file leaf-file-name="reregister.blade.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/resources/views/emails/reregister.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.20323326">
-              <caret line="16" column="28" selection-start-line="16" selection-start-column="28" selection-end-line="16" selection-end-column="28" />
+            <state vertical-scroll-proportion="0.4665127">
+              <caret line="55" column="28" selection-start-line="55" selection-start-column="28" selection-end-line="55" selection-end-column="28" />
               <folding>
-                <marker date="1447932671684" expanded="true" signature="14853:14906" placeholder="..." />
-                <marker date="1447932671684" expanded="true" signature="14865:14906" placeholder="..." />
+                <marker date="1447932765621" expanded="true" signature="14853:14906" placeholder="..." />
+                <marker date="1447932765621" expanded="true" signature="14865:14906" placeholder="..." />
               </folding>
             </state>
           </provider>
@@ -434,12 +433,6 @@
       <option name="number" value="Default" />
       <updated>1447791939615</updated>
     </task>
-    <task id="LOCAL-00004" summary="implemented basic team registration">
-      <created>1447808241266</created>
-      <option name="number" value="00004" />
-      <option name="project" value="LOCAL" />
-      <updated>1447808241267</updated>
-    </task>
     <task id="LOCAL-00005" summary="design tweaks &amp;&amp; adding missing libraries">
       <created>1447830668930</created>
       <option name="number" value="00005" />
@@ -728,7 +721,13 @@
       <option name="project" value="LOCAL" />
       <updated>1447932551590</updated>
     </task>
-    <option name="localTasksCounter" value="53" />
+    <task id="LOCAL-00053" summary="recompressed CSS">
+      <created>1447932682026</created>
+      <option name="number" value="00053" />
+      <option name="project" value="LOCAL" />
+      <updated>1447932682026</updated>
+    </task>
+    <option name="localTasksCounter" value="54" />
     <servers />
   </component>
   <component name="TodoView">
@@ -780,7 +779,6 @@
   <component name="VcsManagerConfiguration">
     <option name="OFFER_MOVE_TO_ANOTHER_CHANGELIST_ON_PARTIAL_COMMIT" value="false" />
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
-    <MESSAGE value="implementing VueJS" />
     <MESSAGE value="implemented hide and show competition registration" />
     <MESSAGE value="added registrationRepository" />
     <MESSAGE value="refactored CreateTeamJob" />
@@ -805,9 +803,9 @@
     <MESSAGE value="added mailer" />
     <MESSAGE value="setup command to notify users of maintenance (reregister please)" />
     <MESSAGE value="designed registration email" />
-    <option name="LAST_COMMIT_MESSAGE" value="designed registration email" />
+    <MESSAGE value="recompressed CSS" />
+    <option name="LAST_COMMIT_MESSAGE" value="recompressed CSS" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
-    <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1196,11 +1194,11 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/emails/reregister.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.20323326">
-          <caret line="16" column="28" selection-start-line="16" selection-start-column="28" selection-end-line="16" selection-end-column="28" />
+        <state vertical-scroll-proportion="0.4665127">
+          <caret line="55" column="28" selection-start-line="55" selection-start-column="28" selection-end-line="55" selection-end-column="28" />
           <folding>
-            <marker date="1447932671684" expanded="true" signature="14853:14906" placeholder="..." />
-            <marker date="1447932671684" expanded="true" signature="14865:14906" placeholder="..." />
+            <marker date="1447932765621" expanded="true" signature="14853:14906" placeholder="..." />
+            <marker date="1447932765621" expanded="true" signature="14865:14906" placeholder="..." />
           </folding>
         </state>
       </provider>

@@ -48,31 +48,16 @@
 												<tr>
 													<td>
 														<p>Bedankt voor het inschrijven voor EHACKB!</p>
-
-														<p>U heeft de volgende opties aangeduid:</p>
-														<ul>
-															@foreach ($registration->options as $option)
-																<li>{{ $option->name }}</li>
-															@endforeach
-														</ul>
-														<p>U heeft ook aangegeven deel te nemen aan volgende
-															activiteiten:</p>
-														<ul>
-															@foreach ($registration->activities as $activity)
-																<li>{{ $activity->name }}</li>
-															@endforeach
-														</ul>
-														@if (!is_null($registration->team))
-															<p>En u neemt deel aan de competitie met uw
-																team {{ $registration->team->name }}</p>
-															<p>De invite token van uw team is
-																<i>{{ $registration->team->token }}</i></p>
-														@endif
+														<p>Omwille van technische problemen hebben wij echter alle registraties moeten resetten</p>
+														<p>
+															Wij willen u dan ook vragen om u opnieuw te registreren op
+															<a href="{{ url('/') }}">eHackB</a>
+														</p>
 													</td>
 												</tr>
 												<tr>
 													<td id="last-cell">
-														Tot gauw, het EHACKB team
+														Onze excuses, het EHACKB team
 													</td>
 												</tr>
 											</tbody>

@@ -13,4 +13,19 @@ class RegistrationMailer extends Mailer
 	{
 		$this->send($registration->email, 'emails.registered', compact('registration'), 'Bedankt voor uw inschrijving!');
 	}
+
+	public function reregister($registration)
+	{
+		$this->send($registration->email, 'emails.reregister', compact('registration'), 'U moet opnieuw inschrijven voor eHackB!');
+	}
+
+	public function getSenderEmail()
+	{
+		return env('MAIL_ADDRESS');
+	}
+
+	public function getSenderName()
+	{
+		return env('MAIL_FROM');
+	}
 }

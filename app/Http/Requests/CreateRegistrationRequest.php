@@ -24,7 +24,7 @@ class CreateRegistrationRequest extends Request
 		return [
 			'voornaam' => 'required',
 			'achternaam' => 'required',
-			'email' => 'required',
+				'email' => 'required|unique:registrations,email',
 			'opties' => 'sometimes',
 			'activiteiten' => 'sometimes',
 			'team_competitie' => 'sometimes|exists:competitions,id',

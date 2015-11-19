@@ -3,7 +3,7 @@
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateActivitiesRegistrationsTable extends Migration
+class CreateActivityRegistrationTable extends Migration
 {
     /**
      * Run the migrations.
@@ -12,12 +12,11 @@ class CreateActivitiesRegistrationsTable extends Migration
      */
     public function up()
     {
-        Schema::create('activities_registrations', function (Blueprint $table)
+        Schema::create('activity_registration', function (Blueprint $table)
         {
             $table->increments('id');
             $table->integer('activity_id');
             $table->integer('registration_id');
-            $table->timestamps();
         });
     }
 
@@ -28,6 +27,6 @@ class CreateActivitiesRegistrationsTable extends Migration
      */
     public function down()
     {
-        Schema::drop('activities_registrations');
+        Schema::drop('activity_registration');
     }
 }

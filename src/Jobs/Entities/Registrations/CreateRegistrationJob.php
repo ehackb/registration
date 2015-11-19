@@ -28,7 +28,6 @@ class CreateRegistrationJob extends Job
 
 	public function handle(RegistrationRepository $registrationRepository)
 	{
-		dd($this);
 		$registration = $registrationRepository->create([
 				'fname' => $this->voornaam,
 				'lname' => $this->achternaam,
@@ -36,6 +35,9 @@ class CreateRegistrationJob extends Job
 				'ip_address' => $_SERVER['REMOTE_ADDR'],
 				'team_id' => is_null($this->team) ? null : $this->team->id
 		]);
+		$registration->options()->sync(is_null($this->opties) ? [] : $this->opties);
+		$registration->activities()->sync(is_null($this->activiteiten) ? [] : $this->activiteiten);
+		$registration->save();
 
 		// TODO options, activiteiten && team etc (ALSO UPDATE MODEL)
 	}

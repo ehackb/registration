@@ -13,7 +13,7 @@ class Registration extends BaseModel
 {
 	protected $table = 'registrations';
 
-	protected $fillable = ['fname', 'lname', 'email', 'ip_address', 'team_id'];
+	protected $fillable = ['fname', 'lname', 'email', 'ip_address', 'team_id', 'competition_id'];
 	
 	public function options()
 	{

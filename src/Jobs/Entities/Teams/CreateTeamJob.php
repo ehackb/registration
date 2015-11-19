@@ -29,7 +29,7 @@ class CreateTeamJob extends Job
 	
 	public function handle(TeamRepository $teamRepository, CompetitionRepository $competitionRepository)
 	{
-		if ($this->team_competitie == null)
+		if ($this->team_competitie == null || $this->team_naam == null)
 			return null;
 
 		$team = Team::where('token', $this->team_naam)->first();

@@ -64,10 +64,12 @@
 														</ul>
 														<!-- TODO check for non team competition -->
 														@if (!is_null($registration->team))
-															<p>En u neemt deel aan de competitie met uw
-																team {{ $registration->team->name }}</p>
+															<p>En u neemt deel aan de {{ $registration->team->competition->name }} competitie met uw
+																team "<i>{{ $registration->team->name }}</i>"</p>
 															<p>De invite token van uw team is
 																<i>{{ $registration->team->token }}</i></p>
+														@elseif(!is_null($registration->competition))
+															<p>U neemt deel aan de {{ $registration->competition->name }} competitie</p>
 														@endif
 													</td>
 												</tr>

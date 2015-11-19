@@ -16,8 +16,12 @@ class CreateRegistrationJob extends Job
 	private $activiteiten;
 	private $opties;
 	private $team;
+	/**
+	 * @var null
+	 */
+	private $team_competitie;
 
-	public function __construct($voornaam, $achternaam, $email, $activiteiten = null, $opties = null, $team)
+	public function __construct($voornaam, $achternaam, $email, $activiteiten = null, $opties = null, $team_competitie = null, $team)
 	{
 		$this->voornaam = $voornaam;
 		$this->achternaam = $achternaam;
@@ -25,6 +29,7 @@ class CreateRegistrationJob extends Job
 		$this->activiteiten = $activiteiten; // optional, defaults to null
 		$this->opties = $opties; // optional, defaults to null
 		$this->team = $team;
+		$this->team_competitie = $team_competitie;
 	}
 
 	public function handle(RegistrationRepository $registrationRepository, RegistrationMailer $mailer)
@@ -34,7 +39,8 @@ class CreateRegistrationJob extends Job
 				'lname' => $this->achternaam,
 				'email' => $this->email,
 				'ip_address' => $_SERVER['REMOTE_ADDR'],
-				'team_id' => is_null($this->team) ? null : $this->team->id
+				'team_id' => is_null($this->team) ? null : $this->team->id,
+				'competition_id' => is_null($this->team_competitie) ? null : $this->team_competitie
 		]);
 		$registration->options()->sync(is_null($this->opties) ? [] : $this->opties);
 		$registration->activities()->sync(is_null($this->activiteiten) ? [] : $this->activiteiten);

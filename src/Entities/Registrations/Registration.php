@@ -5,6 +5,7 @@ namespace EhackB\Entities\Registrations;
 
 use EhackB\Entities\Activities\Activity;
 use EhackB\Entities\Options\Option;
+use EhackB\Entities\Teams\Team;
 use Fundamentals\Entities\Models\BaseModel;
 
 class Registration extends BaseModel
@@ -21,5 +22,10 @@ class Registration extends BaseModel
 	public function activities()
 	{
 		return $this->belongsToMany(Activity::class);
+	}
+
+	public function team()
+	{
+		return $this->belongsTo(Team::class);
 	}
 }

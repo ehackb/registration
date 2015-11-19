@@ -5,6 +5,7 @@ namespace EhackB\Jobs\Entities\Registrations;
 
 
 use EhackB\Entities\Registrations\RegistrationRepository;
+use EhackB\Mailers\Registrations\RegistrationMailer;
 use Fundamentals\Jobs\Job;
 
 class CreateRegistrationJob extends Job
@@ -26,7 +27,7 @@ class CreateRegistrationJob extends Job
 		$this->team = $team;
 	}
 
-	public function handle(RegistrationRepository $registrationRepository)
+	public function handle(RegistrationRepository $registrationRepository, RegistrationMailer $mailer)
 	{
 		$registration = $registrationRepository->create([
 				'fname' => $this->voornaam,
@@ -39,6 +40,6 @@ class CreateRegistrationJob extends Job
 		$registration->activities()->sync(is_null($this->activiteiten) ? [] : $this->activiteiten);
 		$registration->save();
 
-		// TODO options, activiteiten && team etc (ALSO UPDATE MODEL)
+		$mailer->registered($registration); // send en email to the registered user
 	}
 }

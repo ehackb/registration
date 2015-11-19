@@ -24,11 +24,11 @@ class CreateRegistrationRequest extends Request
 		return [
 			'voornaam' => 'required',
 			'achternaam' => 'required',
-				'email' => 'required|unique:registrations,email',
+			'email' => 'required|unique:registrations,email',
 			'opties' => 'sometimes',
 			'activiteiten' => 'sometimes',
-			'team_competitie' => 'sometimes|exists:competitions,id',
-			'team_naam' => 'required_with:team_competitie|unique:teams,name',
+			'team_competitie' => 'sometimes|exists:competitions,id|teamcapacity',
+			'team_naam' => 'sometimes|unique:teams,name',
 			'publiek_team' => 'sometimes'
 		];
 	}

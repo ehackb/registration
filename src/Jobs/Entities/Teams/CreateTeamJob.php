@@ -4,7 +4,6 @@
 namespace EhackB\Jobs\Entities\Teams;
 
 
-use EhackB\Entities\Competitions\Competition;
 use EhackB\Entities\Competitions\CompetitionRepository;
 use EhackB\Entities\Teams\TeamRepository;
 use Fundamentals\Jobs\Job;
@@ -29,18 +28,15 @@ class CreateTeamJob extends Job
 	
 	public function handle(TeamRepository $teamRepository, CompetitionRepository $competitionRepository)
 	{
-		// TODO check if we *need* to create a team
 		if ($this->team_competitie == null)
 			return null;
 
-		$competition = Competition::find($this->team_competitie);
-		// TODO check if team cap is reached
-
+		// TODO check if name isn't a token (in which case an existing team should be used)
 		return $teamRepository->create([
-				'name' => $this->team_naam,
-				'competition_id' => $this->team_competitie,
-				'public' => $this->publiek_team != null,
-				'token' => uniqid()
+			'name' => $this->team_naam,
+			'competition_id' => $this->team_competitie,
+			'public' => $this->publiek_team != null,
+			'token' => uniqid()
 		]);
 	}
 }

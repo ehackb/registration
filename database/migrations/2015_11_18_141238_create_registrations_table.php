@@ -19,6 +19,7 @@ class CreateRegistrationsTable extends Migration
             $table->string('lname');
             $table->string('email')->unique();
             $table->integer('team_id')->nullable();
+            $table->integer('competition_id')->nullable();
             $table->string('ip_address');
             $table->timestamps();
         });

@@ -62,6 +62,7 @@
 																<li>{{ $activity->name }}</li>
 															@endforeach
 														</ul>
+														<!-- TODO check for non team competition -->
 														@if (!is_null($registration->team))
 															<p>En u neemt deel aan de competitie met uw
 																team {{ $registration->team->name }}</p>

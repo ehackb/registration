@@ -131,7 +131,9 @@
 		<script async>
 			$(document).ready(function ()
 			{
-				Materialize.toast('Voor competities dienen zich minstens 2 EHB studenten aan te melden per team!', 4000);
+				@if (session('message'))
+				Materialize.toast('{{ session('message') }}', 4000);
+				@endif
 				$('select').material_select();
 				$('#competities').material_select(function ()
 				{

@@ -15,8 +15,7 @@ class RegistrationController extends Controller
 		$team = $this->dispatchFrom(CreateTeamJob::class, $request);
 		$this->dispatchFrom(CreateRegistrationJob::class, $request, compact('team'));
 
-		// TODO feedback on registration
 		// TODO emails
-		return redirect()->back();
+		return redirect()->back()->with('message', 'Een mail met verdere informatie is naar uw adres verzonden');
 	}
 }

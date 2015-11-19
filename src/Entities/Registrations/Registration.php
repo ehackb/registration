@@ -4,6 +4,7 @@
 namespace EhackB\Entities\Registrations;
 
 use EhackB\Entities\Activities\Activity;
+use EhackB\Entities\Competitions\Competition;
 use EhackB\Entities\Options\Option;
 use EhackB\Entities\Teams\Team;
 use Fundamentals\Entities\Models\BaseModel;
@@ -27,5 +28,10 @@ class Registration extends BaseModel
 	public function team()
 	{
 		return $this->belongsTo(Team::class);
+	}
+
+	public function competition()
+	{
+		return $this->belongsTo(Competition::class);
 	}
 }

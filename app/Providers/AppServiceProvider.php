@@ -3,6 +3,8 @@
 namespace App\Providers;
 
 use EhackB\Entities\Competitions\Competition;
+use EhackB\Entities\Teams\Team;
+use Illuminate\Support\Facades\Request;
 use Illuminate\Support\ServiceProvider;
 
 class AppServiceProvider extends ServiceProvider
@@ -16,6 +18,9 @@ class AppServiceProvider extends ServiceProvider
     {
         \Validator::extend('teamcapacity', function($attribute, $value, $parameters, $validator)
         {
+			if (Team::where('token', Request::get('team_naam'))->first() != null)
+				return true;
+
             $competition = Competition::find($value);
             // TODO check if team cap is reached
             if ($competition->teams)

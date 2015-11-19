@@ -19,9 +19,3 @@ get('/', function ()
 post('/register', 'RegistrationController@register')->name('register');
 
 get('/admin', 'AuthController@admin')->middleware('auth.basic');
-
-get('/dev/email/{mail}', function ($mail)
-{
-	$registration = \EhackB\Entities\Registrations\Registration::first();
-	return view('emails.' . $mail)->with(compact('registration'));
-});

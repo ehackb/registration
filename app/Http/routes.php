@@ -14,10 +14,12 @@
 get('/', function ()
 {
 	return view('register');
-});
+})->name('home');
 
 post('/register', 'RegistrationController@register')->name('register');
 
 get('/admin', 'AuthController@admin')->middleware('auth.basic');
 
 get('/overview', 'RegistrationController@export')->name('export');
+
+get('/purge', 'RegistrationController@purge')->name('purge');

@@ -7,6 +7,6 @@ class AuthController extends Controller
 {
 	public function admin()
 	{
-		return 'go away!';
+		return view('admin');
 	}
 }

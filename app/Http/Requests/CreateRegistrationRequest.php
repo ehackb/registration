@@ -22,7 +22,7 @@ class CreateRegistrationRequest extends Request
 	public function rules()
 	{
 		return [
-			'voornaam' => 'required',
+			'voornaam' => 'required|composite',
 			'achternaam' => 'required',
 			'email' => 'required|unique:registrations,email',
 			'opties' => 'sometimes',

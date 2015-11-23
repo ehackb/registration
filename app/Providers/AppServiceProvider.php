@@ -3,6 +3,7 @@
 namespace App\Providers;
 
 use EhackB\Entities\Competitions\Competition;
+use EhackB\Entities\Registrations\Registration;
 use EhackB\Entities\Teams\Team;
 use Illuminate\Support\Facades\Request;
 use Illuminate\Support\ServiceProvider;
@@ -36,6 +37,11 @@ class AppServiceProvider extends ServiceProvider
 
 			return true;
         });
+
+		\Validator::extend('composite', function($attribute, $value, $parameters, $validator)
+		{
+			return Registration::where('fname', Request::get('voornaam'))->where('lname', Request('achternaam'))->count() == 0;
+		});
     }
 
     /**

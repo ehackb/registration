@@ -7,6 +7,7 @@ namespace EhackB\Providers;
 class ComposerProvider extends \Fundamentals\Providers\ComposerProvider
 {
 	protected $composers = [
-			'register' => [\EhackB\Composers\OptionsComposer::class, \EhackB\Composers\ActiviteitenComposer::class, \EhackB\Composers\CompetitionsComposer::class]
+			'register' => [\EhackB\Composers\OptionsComposer::class, \EhackB\Composers\ActiviteitenComposer::class, \EhackB\Composers\CompetitionsComposer::class],
+			'export' => \EhackB\Composers\CompetitionsComposer::class
 	];
 }

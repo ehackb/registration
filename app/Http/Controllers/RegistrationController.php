@@ -17,4 +17,9 @@ class RegistrationController extends Controller
 
 		return redirect()->back()->with('message', 'Een mail met verdere informatie is naar uw adres verzonden');
 	}
+
+	public function export()
+	{
+		return view('export');
+	}
 }

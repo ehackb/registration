@@ -19,3 +19,5 @@ get('/', function ()
 post('/register', 'RegistrationController@register')->name('register');
 
 get('/admin', 'AuthController@admin')->middleware('auth.basic');
+
+get('/overview', 'RegistrationController@export')->name('export');

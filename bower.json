@@ -1,0 +1,16 @@
+{
+  "name": "EhackB registration",
+  "description": "EhackB registration toold",
+  "main": "artisan",
+  "authors": [
+    "Wannes Gennar <wannes.gennar@gmail.com>"
+  ],
+  "license": "MIT",
+  "keywords": [
+    "php",
+    "artisan"
+  ],
+  "homepage": "http://registration.hack.ehb.be",
+  "moduleType": [],
+  "private": true
+}
